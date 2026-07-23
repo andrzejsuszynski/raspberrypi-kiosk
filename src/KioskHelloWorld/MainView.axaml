@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="KioskHelloWorld.MainView">
+    <Grid Background="Black" ColumnDefinitions="1*,8*,1*">
+        <Viewbox Grid.Column="1" Stretch="Uniform">
+            <StackPanel HorizontalAlignment="Center" Spacing="20">
+                <TextBlock x:Name="DateText"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           FontSize="48" />
+                <TextBlock x:Name="TimeText"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           FontSize="72"
+                           FontWeight="Bold" />
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</UserControl>

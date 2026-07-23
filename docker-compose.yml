@@ -1,0 +1,12 @@
+services:
+  kiosk:
+    # Image is shipped as a tar (kiosk-helloworld-arm64.tar) and loaded with
+    # `docker load` before `docker compose up` — compose can only reference an
+    # already-loaded image by name/tag, not a tar file path directly.
+    image: kiosk-helloworld:latest
+    container_name: kiosk-helloworld
+    restart: unless-stopped
+    devices:
+      - /dev/fb0:/dev/fb0
+    group_add:
+      - video

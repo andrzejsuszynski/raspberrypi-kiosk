@@ -1,0 +1,16 @@
+[Unit]
+Description=Kiosk hello-world (Avalonia, Linux framebuffer, Docker)
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+# Adjust to wherever docker-compose.yml / kiosk-runtime.Dockerfile / publish/ actually live on the Pi.
+WorkingDirectory=/home/pi/kiosk-app
+ExecStart=/usr/bin/docker compose up -d
+ExecStop=/usr/bin/docker compose down
+
+[Install]
+WantedBy=multi-user.target

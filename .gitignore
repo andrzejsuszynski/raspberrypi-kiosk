@@ -1,0 +1,18 @@
+# .NET build output
+bin/
+obj/
+*.user
+
+# Build/publish artifacts (regenerated via arm64-builder.Dockerfile /
+# kiosk-runtime.Dockerfile — see README for the commands). The .tar in
+# particular is ~300MB and has no business in git history.
+publish/
+
+# IDE / editor
+.vs/
+.vscode/
+*.suo
+
+# OS cruft
+Thumbs.db
+.DS_Store
